@@ -189,7 +189,7 @@ def search():
             data.seek(0)
             data.truncate(0)
 
-    # Returs list of vehicles by the search parameters
+    # Returns list of vehicles by the search parameters
     def get_vehicles():
         _vehicles = Vehicle.query.filter(Vehicle.brand.contains(search_form.brand.data),
             Vehicle.model.contains(search_form.model.data),
